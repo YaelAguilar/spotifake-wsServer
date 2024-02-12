@@ -32,13 +32,13 @@ wss.on('connection', (ws) => {
     ws.send(JSON.stringify(data));
   };
 
-  const interval = setInterval(sendData, 2000);
+  const interval = setInterval(sendData, 1000);
 
   ws.on('close', () => {
     clearInterval(interval);
   });
 });
 
-server.listen(3006, () => {
-  console.log('Server running on port 3006');
+server.listen(3005, () => {
+  console.log('Server running on port 3005');
 });
